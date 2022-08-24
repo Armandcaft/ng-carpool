@@ -1,0 +1,17 @@
+<h2> Type Vehicule List </h2>
+
+<table class = "table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+      <!-- <td>Id {{ typeVehicules }} </td> -->
+      <tr *ngFor="let typeVehicule of typeVehicules">
+      <td> {{ typeVehicule.id }} </td>
+      <td> {{ typeVehicule.name }} </td>
+    </tr>
+  </tbody>
+</table>

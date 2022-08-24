@@ -1,0 +1,20 @@
+<h2> Vehicule List </h2>
+
+<table class = "table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Model</th>
+      <th>Description</th>
+      <th>Image</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let vehicule of vehicules">
+      <td> {{ vehicule.id }} </td>
+      <td> {{ vehicule.model }} </td>
+      <td> {{ vehicule.description }} </td>
+      <td> {{ vehicule.image }} </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,20 @@
+<h2> User List </h2>
+
+<table class = "table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Username</th>
+      <th>State</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td> {{ user.id }} </td>
+      <td> {{ user.name }} </td>
+      <td> {{ user.username }} </td>
+      <td> {{ user.state }} </td>
+    </tr>
+  </tbody>
+</table>
