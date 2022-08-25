@@ -1,1 +1,15 @@
-<p>create-type-vehicule works!</p>
+<div class="col-md-6 offset-md-3">
+
+<h3> Create Type Vehicule </h3>
+
+<form (ngSubmit) = "onSubmit()">
+  
+  <div class="form-group">
+    <label> Name Type</label>
+    <input type="text" class="form-control" id = "nameType" [(ngModel)] = "typeVehicule.name" name = "nameType">
+  </div>
+
+  <button class = "btn btn-success" type="submit">Submit</button>
+</form>
+
+</div>

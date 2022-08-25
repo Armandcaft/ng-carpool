@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { TypeVehicule } from 'src/app/models/type-vehicule.model';
+import { TypeVehiculeService } from 'src/app/services/type-vehicule.service';
 
 @Component({
   selector: 'app-type-vehicule-details',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TypeVehiculeDetailsComponent implements OnInit {
 
-  constructor() { }
+  typeVehiculeId!: number;
+  typeVehicule!: TypeVehicule;
+
+  constructor(
+    private route: ActivatedRoute,
+    private typeVehiculeService: TypeVehiculeService
+  ) { }
 
   ngOnInit(): void {
+    this.typeVehiculeId = this.route.snapshot.params['id'];
+
+    this.typeVehicule = new TypeVehicule();
+    this.typeVehiculeService.getTypeVehiculeById(this.typeVehiculeId).subscribe(data => {
+      console.log(data);
+      this.typeVehicule = data;
+    });
   }
 
 }

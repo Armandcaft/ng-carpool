@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { TypeVehicule } from 'src/app/models/type-vehicule.model';
 import { TypeVehiculeService } from 'src/app/services/type-vehicule.service';
 
@@ -12,7 +14,8 @@ export class TypeVehiculeListComponent implements OnInit {
   typeVehicules: TypeVehicule[] = [];
 
   constructor(
-    private typeVehiculeService: TypeVehiculeService
+    private typeVehiculeService: TypeVehiculeService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -39,6 +42,21 @@ export class TypeVehiculeListComponent implements OnInit {
       // console.log(data);
       this.typeVehicules = data;
       // alert(this.typeVehicules);
+    });
+  }
+
+  typeVehiculeDetails(typeVehiculeId: number){
+    this.router.navigate(['type-vehicule-details', typeVehiculeId])
+  }
+
+  updateTypeVehicule(typeVehiculeId: number){
+    this.router.navigate(['update-type-vehicule', typeVehiculeId])
+  }
+
+  deleteTypeVehicule(typeVehiculeId: number){
+    this.typeVehiculeService.deleteTypeVehicule(typeVehiculeId).subscribe(data => {
+      console.log(data);
+      this.getTypeVehicules();
     });
   }
 

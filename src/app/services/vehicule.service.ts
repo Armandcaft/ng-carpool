@@ -19,4 +19,8 @@ export class VehiculeService {
   getVehiculesList(): Observable<Vehicule[]>{
     return this.httpClient.get<Vehicule[]>(this.baseUrl)
   }
+
+  createVehicule(vehicule: Vehicule): Observable<Object>{
+    return this.httpClient.post('${this.baseUrl}', vehicule)
+  }
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,8 @@ import { TypeVehiculeDetailsComponent } from './components/type-vehicule/type-ve
 import { TypeVehiculeService } from './services/type-vehicule.service';
 import { CreateVehiculeComponent } from './components/vehicule/create-vehicule/create-vehicule.component';
 import { CreateTypeVehiculeComponent } from './components/type-vehicule/create-type-vehicule/create-type-vehicule.component';
+import { UpdateTypeVehiculeComponent } from './components/type-vehicule/update-type-vehicule/update-type-vehicule.component';
+import { UpdateVehiculeComponent } from './components/vehicule/update-vehicule/update-vehicule.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +27,17 @@ import { CreateTypeVehiculeComponent } from './components/type-vehicule/create-t
     TypeVehiculeListComponent,
     TypeVehiculeDetailsComponent,
     CreateVehiculeComponent,
-    CreateTypeVehiculeComponent
+    CreateTypeVehiculeComponent,
+    UpdateTypeVehiculeComponent,
+    UpdateVehiculeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [TypeVehiculeService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

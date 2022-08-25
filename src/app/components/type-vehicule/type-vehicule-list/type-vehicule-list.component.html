@@ -2,16 +2,22 @@
 
 <table class = "table table-striped">
   <thead>
-    <tr>
+    <tr class="text-center">
       <th>ID</th>
       <th>Name</th>
+      <th>Actions</th>
     </tr>
   </thead>
   <tbody>
       <!-- <td>Id {{ typeVehicules }} </td> -->
-      <tr *ngFor="let typeVehicule of typeVehicules">
+      <tr *ngFor="let typeVehicule of typeVehicules" class="text-center">
       <td> {{ typeVehicule.id }} </td>
       <td> {{ typeVehicule.name }} </td>
+      <td>
+        <button (click)="typeVehiculeDetails(typeVehicule.id)" class="btn btn-secondary">View</button>
+        <button (click)="updateTypeVehicule(typeVehicule.id)" class="btn btn-info" style="margin-left: 10px;">Update</button>
+        <button (click)="deleteTypeVehicule(typeVehicule.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+      </td>
     </tr>
   </tbody>
 </table>

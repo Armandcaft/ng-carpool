@@ -1,1 +1,27 @@
-<p>type-vehicule-details works!</p>
+<h3> View Type Vehicule Details </h3>
+<!-- <div>
+    <div>
+        <label> <b> ID </b> {{ typeVehicule.id }} </label>  <br>
+        <label> <b> Name </b> {{ typeVehicule.name }} </label>
+    </div>
+</div> -->
+
+<table class = "table table-striped">
+    <thead>
+      <tr class="text-center">
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="text-center">
+        <td> {{ typeVehicule.id }} </td>
+        <td> {{ typeVehicule.name }} </td>
+        <td>
+          <!-- <a routerLink="" routerLinkActive="active" class="btn btn-info">Update</a>
+          <a routerLink="typeVehicules" routerLinkActive="active" class="btn btn-danger" style="margin-left: 10px;">Delete</a> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>

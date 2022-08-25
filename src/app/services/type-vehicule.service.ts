@@ -13,10 +13,34 @@ export class TypeVehiculeService {
   constructor(
     private httpClient: HttpClient
   ) {
-    this.baseUrl = "http://localhost:8081/typeVehicule/getAll";
+    this.baseUrl = "http://localhost:8081/typeVehicule";
   }
 
   getTypeVehiculesList(): Observable<TypeVehicule[]>{
-    return this.httpClient.get<TypeVehicule[]>(this.baseUrl)
+    let baseUrlGet = this.baseUrl+"/getAll";
+    return this.httpClient.get<TypeVehicule[]>(baseUrlGet)
+  }
+
+  createTypeVehicule(typeVehicule: TypeVehicule): Observable<Object>{
+    let baseUrlGet = this.baseUrl+"/create";
+    return this.httpClient.post(baseUrlGet, typeVehicule)
+  }
+
+  getTypeVehiculeById(typeVehiculeId: number): Observable<TypeVehicule>{
+    let baseUrlGet = this.baseUrl+"/get/" + typeVehiculeId;
+    console.log(baseUrlGet);
+    return this.httpClient.get<TypeVehicule>(baseUrlGet)
+  }
+  
+  updateTypeVehicule(typeVehiculeId: number, typeVehicule: TypeVehicule): Observable<Object>{
+    let baseUrlGet = this.baseUrl+"/update/" + typeVehiculeId;
+    return this.httpClient.put(baseUrlGet, typeVehicule)
+  }
+
+  deleteTypeVehicule(typeVehiculeId: number): Observable<Object>{
+    let baseUrlGet = this.baseUrl+"/delete/" + typeVehiculeId
+    alert('Delete ?')
+    return this.httpClient.delete(baseUrlGet)
+    alert('Deleted !')
   }
 }
