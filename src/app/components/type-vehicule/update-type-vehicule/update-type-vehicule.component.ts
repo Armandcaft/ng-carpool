@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+
 import { TypeVehicule } from 'src/app/models/type-vehicule.model';
 import { TypeVehiculeService } from 'src/app/services/type-vehicule.service';
 
