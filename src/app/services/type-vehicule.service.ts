@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { TypeVehicule } from '../models/type-vehicule.model';
+import { TypeVehicule } from '../models/administration/type-vehicule.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class TypeVehiculeService {
   constructor(
     private httpClient: HttpClient
   ) {
-    this.baseUrl = "http://localhost:8081/typeVehicule";
+    this.baseUrl = "http://localhost:8080/typeVehicule";
   }
 
   getTypeVehiculesList(): Observable<TypeVehicule[]>{
@@ -31,7 +31,7 @@ export class TypeVehiculeService {
     console.log(baseUrlGet);
     return this.httpClient.get<TypeVehicule>(baseUrlGet)
   }
-  
+
   updateTypeVehicule(typeVehiculeId: number, typeVehicule: TypeVehicule): Observable<Object>{
     let baseUrlGet = this.baseUrl+"/update/" + typeVehiculeId;
     return this.httpClient.put(baseUrlGet, typeVehicule)

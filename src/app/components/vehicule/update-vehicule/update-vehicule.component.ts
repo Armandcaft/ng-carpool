@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { Vehicule } from 'src/app/models/vehicule.model';
-import { VehiculeService } from 'src/app/services/vehicule.service';
+import { Vehicule } from '../../../models/administration/vehicule.model';
+import { VehiculeService } from '../../../services/vehicule.service';
 
 @Component({
   selector: 'app-update-vehicule',

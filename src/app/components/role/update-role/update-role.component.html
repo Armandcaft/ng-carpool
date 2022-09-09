@@ -1,1 +1,15 @@
-<p>update-role works!</p>
+<div class="col-md-6 offset-md-3">
+
+  <h3> Update Option </h3>
+
+  <form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+      <label> Model Name </label>
+      <input type="text" class="form-control" id = "nameType" [(ngModel)] = "role.id" name = "modelName">
+    </div>
+
+    <button class = "btn btn-success" type="submit">Submit</button>
+  </form>
+
+  </div>

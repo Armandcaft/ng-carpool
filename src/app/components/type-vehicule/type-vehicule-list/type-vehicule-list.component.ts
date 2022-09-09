@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { TypeVehicule } from 'src/app/models/type-vehicule.model';
-import { TypeVehiculeService } from 'src/app/services/type-vehicule.service';
+import { TypeVehicule } from '../../../models/administration/type-vehicule.model';
+import { TypeVehiculeService } from '../../../services/type-vehicule.service';
 
 @Component({
   selector: 'app-type-vehicule-list',
@@ -40,7 +40,7 @@ export class TypeVehiculeListComponent implements OnInit {
   private getTypeVehicules(){
     this.typeVehiculeService.getTypeVehiculesList().subscribe(data => {
       // console.log(data);
-      this.typeVehicules = data;
+      this.typeVehicules = data;      /*this.typeVehicules = data as unknown as TypeVehicule[];*/
       // alert(this.typeVehicules);
     });
   }

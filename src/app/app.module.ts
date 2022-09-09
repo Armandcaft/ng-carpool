@@ -11,7 +11,6 @@ import { VehiculeDetailsComponent } from './components/vehicule/vehicule-details
 import { VehiculeListComponent } from './components/vehicule/vehicule-list/vehicule-list.component';
 import { TypeVehiculeListComponent } from './components/type-vehicule/type-vehicule-list/type-vehicule-list.component';
 import { TypeVehiculeDetailsComponent } from './components/type-vehicule/type-vehicule-details/type-vehicule-details.component';
-import { TypeVehiculeService } from './services/type-vehicule.service';
 import { CreateVehiculeComponent } from './components/vehicule/create-vehicule/create-vehicule.component';
 import { CreateTypeVehiculeComponent } from './components/type-vehicule/create-type-vehicule/create-type-vehicule.component';
 import { UpdateTypeVehiculeComponent } from './components/type-vehicule/update-type-vehicule/update-type-vehicule.component';

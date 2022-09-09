@@ -1,1 +1,41 @@
-<p>trajet-details works!</p>
+<h3> View Trajet Details </h3>
+
+<table class = "table table-striped">
+  <thead>
+    <tr class="text-center">
+      <th>ID</th>
+      <th>State</th>
+      <th>Price</th>
+      <th>Date & Time</th>
+      <th>Num Place</th>
+      <th>Type Trajet</th>
+      <th>Depart</th>
+      <th>Latitude Dep</th>
+      <th>Longitude Dep</th>
+      <th>Arriv</th>
+      <th>Latitude Arriv</th>
+      <th>Longitude Arriv</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr class="text-center">
+        <td> {{ trajet.id }} </td>
+        <td> {{ trajet.state }} </td>
+        <td> {{ trajet.price }} || currency </td>
+        <td> {{ trajet.hour }} : {{ trajet.date }} </td>
+        <td> {{ trajet.nbPlace }} </td>
+        <td> {{ trajet.typeTrajet }} </td>
+        <td> {{ trajet.nameDepart }} </td>
+        <td> {{ trajet.nameArrive }} </td>
+        <td> {{ trajet.latitudeDepart }} </td>
+        <td> {{ trajet.longitudeDepart }} </td>
+        <td> {{ trajet.latitudeArrive }} </td>
+        <td> {{ trajet.longitudeArrive }} </td>
+      <td>
+        <!-- <a routerLink="" routerLinkActive="active" class="btn btn-info">Update</a>
+        <a routerLink="typeVehicules" routerLinkActive="active" class="btn btn-danger" style="margin-left: 10px;">Delete</a> -->
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,1 +1,26 @@
-<p>point-arret-details works!</p>
+<h3> View Type Vehicule Details </h3>
+
+<table class = "table table-striped">
+  <thead>
+    <tr class="text-center">
+      <th>ID</th>
+      <th>NamePointArret</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>trajetId</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr class="text-center">
+        <td> {{ pointArret.id }} </td>
+        <td> {{ pointArret.namePointArret }} </td>
+        <td> {{ pointArret.latitude }} </td>
+        <td> {{ pointArret.longitude }} </td>
+        <td> <!--/*{{ pointArret.trajetId }}*/--> </td>
+        <td>
+        <!-- <a routerLink="" routerLinkActive="active" class="btn btn-info">Update</a>
+        <a routerLink="typeVehicules" routerLinkActive="active" class="btn btn-danger" style="margin-left: 10px;">Delete</a> -->
+      </td>
+    </tr>
+  </tbody>
+</table>

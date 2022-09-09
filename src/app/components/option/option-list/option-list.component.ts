@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { Option } from 'src/app/models/option.model';
-import { OptionService } from 'src/app/services/option.service';
+import { Option } from '../../../models/administration/option.model';
+import { OptionService } from '../../../services/option.service';
 
 @Component({
   selector: 'app-option-list',

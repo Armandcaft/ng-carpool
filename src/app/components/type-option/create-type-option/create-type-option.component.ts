@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { TypeOption } from 'src/app/models/type-option.model';
-import { TypeOptionService } from 'src/app/services/type-option.service';
+import { TypeOption } from '../../../models/administration/type-option.model';
+import { TypeOptionService } from '../../../services/type-option.service';
 
 @Component({
   selector: 'app-create-type-option',

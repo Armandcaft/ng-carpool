@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Option } from '../models/option.model';
+import { Option } from '../models/administration/option.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class OptionService {
   constructor(
     private httpClient: HttpClient
   ) {
-    this.baseUrl = "http://localhost:8081/option";
+    this.baseUrl = "http://localhost:8080/option";
   }
 
   getOptionsList(): Observable<Option[]>{

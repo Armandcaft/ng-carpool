@@ -1,8 +1,9 @@
+import { Vehicule } from "../administration/vehicule.model"
+
 export class Trajet {
   id!: number
-  vehiculeId!: number
   state!: number
-  status!: number
+  // vehicule!: Vehicule
   price!: Date
   hour!: number
   date!: Date

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { TypeVehicule } from 'src/app/models/type-vehicule.model';
-import { TypeVehiculeService } from 'src/app/services/type-vehicule.service';
+import { TypeVehicule } from '../../../models/administration/type-vehicule.model';
+import { TypeVehiculeService } from '../../../services/type-vehicule.service';
 
 @Component({
   selector: 'app-type-vehicule-details',

@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { Reservation } from '../../../models/booking/reservation.model';
+import { ReservationService } from '../../../services/reservation.service';
 
 @Component({
   selector: 'app-create-reservation',
@@ -7,9 +11,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateReservationComponent implements OnInit {
 
-  constructor() { }
+  reservation: Reservation = new Reservation();
+
+  constructor(
+    private reservationService: ReservationService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  saveReservation(){
+    this.reservationService.createReservation(this.reservation).subscribe( data => {
+      console.log(data);
+      this.goToReservationList();
+    },
+    error => console.log(error));
+  }
+
+  goToReservationList(){
+    this.router.navigate(['/reservations']);
+  }
+
+  onSubmit(){
+    console.log("Form submission.. Done !");
+    console.log(this.reservation);
+    this.saveReservation();
   }
 
 }

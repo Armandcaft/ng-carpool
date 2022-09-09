@@ -2,19 +2,29 @@
 
 <table class = "table table-striped">
   <thead>
-    <tr class="text-center">
+    <tr>
       <th>ID</th>
       <th>Name</th>
+      <th>Description</th>
+      <th>Colour</th>
+      <th>Image</th>
+      <th>Marque</th>
+      <th>Model</th>
+      <th>Vehicule Type</th>
       <th>Actions</th>
     </tr>
   </thead>
   <tbody>
       <tr class="text-center">
-      <td> {{ vehicule.id }} </td>
-      <td> {{ vehicule.model }} </td>
-      <td> {{ vehicule.description }} </td>
-      <td> {{ vehicule.image }} </td>
-      <td>
+        <td> {{ vehicule.id }} </td>
+        <td> {{ vehicule.name }} </td>
+        <td> {{ vehicule.description }} </td>
+        <td> {{ vehicule.colour }} </td>
+        <td> {{ vehicule.image }} </td>
+        <td> {{ vehicule.marque }} </td>
+        <td> {{ vehicule.model }} </td>
+        <!-- <td> {{ vehicule.typeVehicule.name }} </td> -->
+        <td>
         <!-- <a routerLink="" routerLinkActive="active" class="btn btn-info">Update</a>
         <a routerLink="typeVehicules" routerLinkActive="active" class="btn btn-danger" style="margin-left: 10px;">Delete</a> -->
       </td>

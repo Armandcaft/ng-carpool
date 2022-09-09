@@ -1,1 +1,28 @@
-<p>point-arret-list works!</p>
+<h2> PointArret List </h2>
+
+<table class = "table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NamePointArret</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>trajetId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let pointArret of pointArrets">
+      <td> {{ pointArret.id }} </td>
+      <td> {{ pointArret.namePointArret }} </td>
+      <td> {{ pointArret.latitude }} </td>
+      <td> {{ pointArret.longitude }} </td>
+      <td></td>
+      <!-- <td> {{ pointArret.trajetId }} </td> -->
+      <td>
+        <button (click)="pointArretDetails(pointArret.id)" class="btn btn-secondary">View</button>
+        <button (click)="updatePointArret(pointArret.id)" class="btn btn-info" style="margin-left: 10px;">Update</button>
+        <button (click)="deletePointArret(pointArret.id)" class="btn btn-danger" style="margin-left: 10px;">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
