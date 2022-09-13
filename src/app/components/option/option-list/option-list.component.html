@@ -12,7 +12,9 @@
   <tbody>
     <tr *ngFor="let option of options">
       <td> {{ option.id }} </td>
-      <td> /*{{ option.id }}*/ </td>
+      <td> /*{{ option.typeOption.name }}*/ </td>
+      <td> /*{{ option.vehicule.name }}*/ </td>
+      <td> /*{{ option.vehicule.typeVehicule.name }}*/ </td>
       <td> /*{{ option.id }}*/ </td>
       <td>
         <button (click)="optionDetails(option.id)" class="btn btn-secondary">View</button>

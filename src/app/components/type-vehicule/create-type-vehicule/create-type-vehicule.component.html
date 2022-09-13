@@ -2,11 +2,12 @@
 
 <h3> Create Type Vehicule </h3>
 
-<form (ngSubmit) = "onSubmit()">
-  
+<form (ngSubmit) = "onSubmit()" #userForm="ngForm">
+
   <div class="form-group">
-    <label> Name Type</label>
-    <input type="text" class="form-control" id = "nameType" [(ngModel)] = "typeVehicule.name" name = "nameType">
+    <label for=""> Name Type</label>
+    <input type="text" class="form-control" id = "nameType" [(ngModel)] = "typeVehicule.name" name = "nameType" placeholder="Enter name">
+    <!-- <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div> -->
   </div>
 
   <button class = "btn btn-success" type="submit">Submit</button>

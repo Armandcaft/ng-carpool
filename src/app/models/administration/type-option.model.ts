@@ -1,4 +1,4 @@
 export class TypeOption {
   id!: number
-  optionName!: string
+  name!: string
 }

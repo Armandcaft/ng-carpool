@@ -11,6 +11,7 @@ import { VehiculeService } from '../../../services/vehicule.service';
 })
 export class CreateVehiculeComponent implements OnInit {
 
+  vehicules: Vehicule[] = [];
   vehicule: Vehicule = new Vehicule();
 
   constructor(
@@ -19,6 +20,9 @@ export class CreateVehiculeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+      this.vehiculeService.getVehiculesList().subscribe(data => {
+        this.vehicules = data;
+      });
   }
 
   saveVehicule(){

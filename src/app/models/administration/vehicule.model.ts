@@ -9,6 +9,6 @@ export class Vehicule {
     image!: string;
     marque!: string;
     model!: string;
-    // typeVehicule!: TypeVehicule;
+    typeVehicule!: TypeVehicule;
     // user!: User;
 }

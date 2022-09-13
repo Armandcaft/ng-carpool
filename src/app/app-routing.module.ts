@@ -46,7 +46,7 @@ const routes: Routes = [
 
   {path: 'typeVehicules', component: TypeVehiculeListComponent},
   {path: 'create-type-vehicule', component: CreateTypeVehiculeComponent},
-  {path: '', redirectTo: 'type-vehicules', pathMatch: 'full'},
+  {path: '', redirectTo: 'typeVehicules', pathMatch: 'full'},
   {path: 'update-type-vehicule/:id', component: UpdateTypeVehiculeComponent},
   {path: 'type-vehicule-details/:id', component: TypeVehiculeDetailsComponent},
 
